@@ -34,11 +34,7 @@ var romanToInt = function(s) {
         }
     }
     
-    let next = "";
-    
     return s.split("").reduce((prev, curr, index, array) => {
-        next = array[index + 1];
-        
         return prev + judgeRomanChar(curr, array[index + 1]);
     }, 0);
 };
