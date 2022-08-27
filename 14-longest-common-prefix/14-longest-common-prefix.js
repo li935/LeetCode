@@ -5,8 +5,6 @@
 var longestCommonPrefix = function(strs) {
     let prefix = "";
     
-    // strs.sort((a, b) => a.length - b.length);
-    
     const shortestWord = strs[0].length;
     
     for (let i = 0; i < shortestWord; i++) {
