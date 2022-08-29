@@ -13,8 +13,8 @@ var isSubsequence = function(s, t) {
             if (index < 0) {
                 return false;
             } else {
-                lastIndex = index;
-                if (lastIndex === index) lastIndex++;
+                lastIndex = index + 1;
+                // if (lastIndex === index) lastIndex++;
             }
         }
         
