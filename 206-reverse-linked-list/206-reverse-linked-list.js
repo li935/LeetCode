@@ -33,7 +33,7 @@ var reverseList = function(head) {
     for (let i = 0; i < iterations; i++) {
         let tempHead = head;
 
-        for (let j = i; j < length - i - 1; j++) {
+        for (let j = i + 1; j < length - i; j++) {
             tempHead = tempHead.next;
         }
 
