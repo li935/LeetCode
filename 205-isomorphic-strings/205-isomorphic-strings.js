@@ -4,7 +4,7 @@
  * @return {boolean}
  */
 var isIsomorphic = function(s, t) {
-    const test = (str) => {
+    const getIsomorphic = (str) => {
         const strIdx = [];
         const isomorphic = [];
         
@@ -22,9 +22,9 @@ var isIsomorphic = function(s, t) {
         return isomorphic;
     };
     
-    const test2 = (str1, str2) => {
-        return JSON.stringify(str1) === JSON.stringify(str2);
+    const compareIsomorphic = (s, t) => {
+        return JSON.stringify(s) === JSON.stringify(t);
     }
     
-    return test2(test(s), test(t));
+    return compareIsomorphic(getIsomorphic(s), getIsomorphic(t));
 };
