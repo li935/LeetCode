@@ -14,7 +14,6 @@ var isSubsequence = function(s, t) {
                 return false;
             } else {
                 lastIndex = index + 1;
-                // if (lastIndex === index) lastIndex++;
             }
         }
         
