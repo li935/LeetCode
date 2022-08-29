@@ -27,7 +27,6 @@ var reverseList = function(head) {
     
     const length = getLengthOfList(head);
     const iterations = getIterationsOfList(length);
-    
     const node = head;
     
     for (let i = 0; i < iterations; i++) {
