@@ -23,13 +23,7 @@ var isIsomorphic = function(s, t) {
     };
     
     const test2 = (str1, str2) => {
-        for (let i = 0; i < str1.length; i++) {
-            if (str1[i] !== str2[i]) {
-                return false;
-            }
-        }
-        
-        return true;
+        return JSON.stringify(str1) === JSON.stringify(str2);
     }
     
     return test2(test(s), test(t));
