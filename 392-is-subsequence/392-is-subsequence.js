@@ -6,7 +6,7 @@
 var isSubsequence = function(s, t) {
     let lastIndex = 0;
     
-    const isSubsequence = () => {
+    const judge = () => {
         for (let i = 0; i < s.length; i++) {
             const index = t.indexOf(s[i], lastIndex);
 
@@ -21,5 +21,5 @@ var isSubsequence = function(s, t) {
         return true;
     }
 
-    return isSubsequence();
+    return judge();
 };
