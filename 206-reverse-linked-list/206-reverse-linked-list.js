@@ -11,22 +11,22 @@
  */
 var reverseList = function(head) {
     const getLengthOfList = head => {
-        let idx = 0;
+        let lengthOfList = 0;
         
         while (head) {
-            idx += 1;
+            lengthOfList += 1;
             head = head.next;
         }
         
-        return idx;
-    }
+        return lengthOfList;
+    };
     
-    const getIterationsOfReverse = length => {
+    const getIterationsOfList = length => {
         return Math.floor(length / 2);
-    }
+    };
     
     const length = getLengthOfList(head);
-    const iterations = getIterationsOfReverse(length);
+    const iterations = getIterationsOfList(length);
     
     const node = head;
     
