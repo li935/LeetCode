@@ -18,12 +18,10 @@ var middleNode = function(head) {
             length++;
         }
         
-        return length;
+        return length - 1;
     };
     
-    console.log(Math.floor(getLength(head) / 2));
-    
-    for (let i = 1; i < getLength(head); i++) {
+    for (let i = 0; i < getLength(head); i++) {
         head = head.next;
     }
     
