@@ -10,27 +10,32 @@
  * @param {ListNode} head
  * @return {ListNode}
  */
-const detectCycle = head => {
-  let p1 = head;
-  let p2 = head;
-  
-  while (p2 && p2.next && p2.next.next) {
-    p1 = p1.next;
-    p2 = p2.next.next;
-    if (p1 === p2) {
-	  return detectCyclePos(head, p2);
-	}
-  }
-  return null;
+
+var detectCycle = head => {
+    let slow = head;
+    let fast = head;
+    
+    while (fast && fast.next && fast.next.next) {
+        slow = slow.next;
+        fast = fast.next.next;
+        
+        if (slow === fast) {
+            console.log(head.val, fast.val);
+            return detectCyclePos(head, fast);
+        }
+    }
+    
+    return null;
 };
 
-//phase 2 helper function to determine the actual cycle point (not just where the pointers intersected)
 const detectCyclePos = (head, intersection) => {
-  let p1 = head;
-  let p2 = intersection;
-  while (p1 !== p2) {
-    p1 = p1.next;
-    p2 = p2.next;
-  }
-  return p1;
+    let slow = head;
+    let fast = intersection;
+  
+    while (slow !== fast) {
+        slow = slow.next;
+        fast = fast.next;
+    }
+    
+    return fast;
 };
