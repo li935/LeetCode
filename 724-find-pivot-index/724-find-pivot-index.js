@@ -3,8 +3,6 @@
  * @return {number}
  */
 var pivotIndex = function(nums) {
-    if (nums.length === 1) return 0;
-    
     let pivotIndex = 0;
     
     while (pivotIndex < nums.length) {
@@ -18,12 +16,9 @@ var pivotIndex = function(nums) {
             rightSum += nums[i];
         }
         
-        console.log("Left:" + leftSum + ", Right:" + rightSum);
-        
         if (leftSum === rightSum) {
             return pivotIndex;
         }
-        
         
         pivotIndex++;
     }
