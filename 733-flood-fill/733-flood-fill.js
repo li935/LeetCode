@@ -27,10 +27,9 @@ var floodFill = function(image, sr, sc, color) {
                     dfs(x, y);
                 }
             }
-            
         }
     };
-    
+
     if (prevColor !== color) dfs(sr, sc);
     
     return image;
