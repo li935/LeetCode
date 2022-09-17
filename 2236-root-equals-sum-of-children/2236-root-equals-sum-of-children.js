@@ -10,10 +10,6 @@
  * @param {TreeNode} root
  * @return {boolean}
  */
-var checkTree = function(root) {
-    if (root.val === root.left.val + root.right.val) {
-        return true;
-    } else {
-        return false;
-    }
+var checkTree = function(root) {    
+    return root.val === root.left.val + root.right.val ? true : false;
 };
