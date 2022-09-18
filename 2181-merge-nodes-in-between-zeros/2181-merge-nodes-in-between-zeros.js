@@ -17,19 +17,16 @@ var mergeNodes = function(head) {
     
     while (head) {
         if (head.val === 0) {
-            if (zeroChecker === -1) {
-                zeroChecker = 1;
-            } else if (zeroChecker === 1) {
                 mergeNodeList.next = {val: mergeNode, next: null};
                 mergeNodeList = mergeNodeList.next;
                 mergeNode = 0;
             }
-        } else {
+         else {
             mergeNode += head.val;
         }
         
         head = head.next;
     }
     
-    return mergeNodeHead.next;
+    return mergeNodeHead.next.next;
 };
