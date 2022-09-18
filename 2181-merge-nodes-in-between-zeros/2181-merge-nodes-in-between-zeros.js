@@ -10,18 +10,16 @@
  * @return {ListNode}
  */
 var mergeNodes = function(head) {
-    let zeroChecker = -1;
     let mergeNode = 0;
     let mergeNodeList = {val: 0, next: null};
     let mergeNodeHead = mergeNodeList;
     
     while (head) {
         if (head.val === 0) {
-                mergeNodeList.next = {val: mergeNode, next: null};
-                mergeNodeList = mergeNodeList.next;
-                mergeNode = 0;
-            }
-         else {
+            mergeNodeList.next = {val: mergeNode, next: null};
+            mergeNodeList = mergeNodeList.next;
+            mergeNode = 0;
+        } else {
             mergeNode += head.val;
         }
         
