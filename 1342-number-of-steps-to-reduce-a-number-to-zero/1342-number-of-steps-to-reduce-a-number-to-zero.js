@@ -8,7 +8,7 @@ var numberOfSteps = function(num) {
     const isEven = num => num / 2;
     const isOdd = num => num - 1;
     
-    while (num > 0) {
+    while (num) {
         if (num % 2 === 0) {
             num = isEven(num);
         } else {
