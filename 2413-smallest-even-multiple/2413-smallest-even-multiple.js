@@ -3,11 +3,5 @@
  * @return {number}
  */
 var smallestEvenMultiple = function(n) {
-    while (true) {
-        if (n % 2 === 0) {
-            return n;
-        } else {
-            n *= 2;
-        }
-    }
+    return n % 2 === 0 ? n : smallestEvenMultiple(n * 2);
 };
