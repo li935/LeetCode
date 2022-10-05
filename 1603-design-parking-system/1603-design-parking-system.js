@@ -4,9 +4,7 @@
  * @param {number} small
  */
 var ParkingSystem = function(big, medium, small) {
-    ParkingSystem.big = big;
-    ParkingSystem.medium = medium;
-    ParkingSystem.small = small;
+    ParkingSystem.space = [big, medium, small];
 };
 
 /** 
@@ -14,16 +12,16 @@ var ParkingSystem = function(big, medium, small) {
  * @return {boolean}
  */
 ParkingSystem.prototype.addCar = function(carType) {
-    switch (carType) {
-        case 1:
-            ParkingSystem.big -= 1;
-            return ParkingSystem.big < 0 ? false : true;
-        case 2:
-            ParkingSystem.medium -= 1;
-            return ParkingSystem.medium < 0 ? false : true;
-        case 3:
-            ParkingSystem.small -= 1;
-            return ParkingSystem.small < 0 ? false : true;
+    return isFull();
+    
+    function isFull() {
+        if (ParkingSystem.space[carType - 1] === 0) {
+            return false;
+        } else {
+            ParkingSystem.space[carType - 1]--;
+            
+            return true;
+        }
     }
 };
 
